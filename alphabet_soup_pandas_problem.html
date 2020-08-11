@@ -13168,12 +13168,12 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Image by <a href="https://pixabay.com/users/sharonang-99559/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1711000">Sharon Ang</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1711000">Pixabay</a></p>
-<h2 id="Here's-the-Pandas-problem:">Here's the Pandas problem:<a class="anchor-link" href="#Here's-the-Pandas-problem:">&#182;</a></h2><p>A CSV report has been produced for the alphabet soup project &lt;- link this.</p>
-<p>However, there is a formatting problem with the file. When the sample report is read usineg the pandas dataframe, the last column - 'best_decrypted_word_dict' has been split accross several columns. The 4 dataframes below illustrate the problem.</p>
+<h2 id="Here's-the-Pandas-problem:">Here's the Pandas problem:<a class="anchor-link" href="#Here's-the-Pandas-problem:">&#182;</a></h2><p>A CSV report has been produced for the alphabet soup project: <a href="https://github.com/Kremzeeq/alphabet_soup/blob/master/reports/alphabet_soup_sample_report.csv">reports/alphabet_soup_sample_report.csv</a></p>
+<p>However, there is a formatting problem with the file. When the sample report is read usineg the pandas dataframe, the last column - 'best_decrypted_word_dict' has been split accross several columns. The dataframe below illustrates the problem.</p>
 <p>It can be seen that this has also resulted in the misallocation of the 14 column names for the pandas dataframe.</p>
 <p>The task is to fix the formatting problems for the pandas dataframe and output the report to a CSV named 'alphabet_soup_sample_report_fixed.csv'.</p>
 <p><strong>PLEASE NOTE</strong></p>
-<p>Scrolling down reveals the Solution section, so please take case of spoilers!!</p>
+<p>Scrolling down reveals the <strong>Solution</strong> section, so please take case of spoilers!!</p>
 <p>This primarily lists steps which can be followed as a holistic hint to solving the problem</p>
 
 </div>
@@ -13186,7 +13186,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;assets/alphabet_soup_sample_report.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;reports/alphabet_soup_sample_report.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13380,546 +13380,6 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;no_of_runs&#39;</span><span class="p">,</span><span class="s1">&#39;mean_accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;standard_dev&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="s1">&#39;word_decoder_max_epochs&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>no_of_runs</th>
-      <th>mean_accuracy</th>
-      <th>standard_dev</th>
-      <th>median</th>
-      <th>word_decoder_max_epochs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">150</th>
-      <th>28.866667</th>
-      <th>4.102163</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>0</td>
-      <td>438.690037</td>
-      <td>TextBlobWordFinder</td>
-      <td>40.0</td>
-      <td>{'0ro0ec0': 'project'</td>
-    </tr>
-    <tr>
-      <th>28.733333</th>
-      <th>4.062708</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>0</td>
-      <td>382.826677</td>
-      <td>TextBlobWordFinder</td>
-      <td>40.0</td>
-      <td>{'0ala00': 'galaxy'</td>
-    </tr>
-    <tr>
-      <th>28.533333</th>
-      <th>4.394424</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>75</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>0</td>
-      <td>818.225044</td>
-      <td>TextBlobWordFinder</td>
-      <td>40.0</td>
-      <td>{'0ro0ec0': 'project'</td>
-    </tr>
-    <tr>
-      <th>27.800000</th>
-      <th>4.758602</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>100</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>0</td>
-      <td>835.377826</td>
-      <td>TextBlobWordFinder</td>
-      <td>40.0</td>
-      <td>{'0ala00': 'galaxy'</td>
-    </tr>
-    <tr>
-      <th>28.266667</th>
-      <th>4.597441</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>125</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>0</td>
-      <td>1118.366127</td>
-      <td>TextBlobWordFinder</td>
-      <td>40.0</td>
-      <td>{'0ala00': 'galaxy'</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;word_finder_min_iters_per_epoch&#39;</span><span class="p">,</span><span class="s1">&#39;word_finder_min_potential_words&#39;</span><span class="p">,</span><span class="s1">&#39;word_finder_max_epochs&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>word_finder_min_iters_per_epoch</th>
-      <th>word_finder_min_potential_words</th>
-      <th>word_finder_max_epochs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">150</th>
-      <th>28.866667</th>
-      <th>4.102163</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ala00': 'galaxy'</td>
-      <td>'0e00est': 'request'</td>
-      <td>'0ra0e0': 'brazen'</td>
-    </tr>
-    <tr>
-      <th>28.733333</th>
-      <th>4.062708</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ro0ec0': 'project'</td>
-      <td>'0ra0e0': 'brazen'</td>
-      <td>'0e00est': 'request'</td>
-    </tr>
-    <tr>
-      <th>28.533333</th>
-      <th>4.394424</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>75</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ala00': 'galaxy'</td>
-      <td>'0e00est': 'request'</td>
-      <td>'0ra0e0': 'brazen'</td>
-    </tr>
-    <tr>
-      <th>27.800000</th>
-      <th>4.758602</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>100</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ro0ec0': 'project'</td>
-      <td>'0e00est': 'request'</td>
-      <td>'0ra0e0': 'brazen'</td>
-    </tr>
-    <tr>
-      <th>28.266667</th>
-      <th>4.597441</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>125</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ro0ec0': 'project'</td>
-      <td>'0e00est': 'bequest'</td>
-      <td>'0o0ey': 'money'</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;word_finder_max_attempts&#39;</span><span class="p">,</span><span class="s1">&#39;no_of_random_letters&#39;</span><span class="p">,</span><span class="s1">&#39;time_taken_in_seconds&#39;</span><span class="p">,</span><span class="s1">&#39;word_finder_name&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>word_finder_max_attempts</th>
-      <th>no_of_random_letters</th>
-      <th>time_taken_in_seconds</th>
-      <th>word_finder_name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">150</th>
-      <th>28.866667</th>
-      <th>4.102163</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0o0ey': 'dovey'</td>
-      <td>'s00r0': 'swarm'</td>
-      <td>'0ebr0': 'kebre'</td>
-      <td>'0ri0t': 'lriit'</td>
-    </tr>
-    <tr>
-      <th>28.733333</th>
-      <th>4.062708</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0o0ey': 'dovey'</td>
-      <td>'s00r0': 'swarm'</td>
-      <td>'0ebr0': 'kebre'</td>
-      <td>'0ri0t': 'lriit'</td>
-    </tr>
-    <tr>
-      <th>28.533333</th>
-      <th>4.394424</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>75</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0o0ey': 'dovey'</td>
-      <td>'s00r0': 'swarm'</td>
-      <td>'0ri0t': 'kriet'</td>
-      <td>'00amy': 'foamy'</td>
-    </tr>
-    <tr>
-      <th>27.800000</th>
-      <th>4.758602</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>100</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0o0ey': 'dovey'</td>
-      <td>'s00r0': 'swarm'</td>
-      <td>'0ri0t': 'hriit'</td>
-      <td>'00amy': 'foamy'</td>
-    </tr>
-    <tr>
-      <th>28.266667</th>
-      <th>4.597441</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>125</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'s00r0': 'shore'</td>
-      <td>'0ri0t': 'wrist'</td>
-      <td>'0ra0e0': 'draiea'</td>
-      <td>'0e00ry': 'zekvry'</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;best_accuracy&#39;</span><span class="p">,</span><span class="s1">&#39;best_decrypted_word_dict&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>best_accuracy</th>
-      <th>best_decrypted_word_dict</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="5" valign="top">150</th>
-      <th>28.866667</th>
-      <th>4.102163</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'00amy': 'foamy'</td>
-      <td>'0e00ry': 'sechry'}</td>
-    </tr>
-    <tr>
-      <th>28.733333</th>
-      <th>4.062708</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>50</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'00amy': 'foamy'</td>
-      <td>'0e00ry': 'cehsry'}</td>
-    </tr>
-    <tr>
-      <th>28.533333</th>
-      <th>4.394424</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>75</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ebr0': 'lebri'</td>
-      <td>'0e00ry': 'hecsry'}</td>
-    </tr>
-    <tr>
-      <th>27.800000</th>
-      <th>4.758602</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>100</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ebr0': 'sebre'</td>
-      <td>'0e00ry': 'leckry'}</td>
-    </tr>
-    <tr>
-      <th>28.266667</th>
-      <th>4.597441</th>
-      <th>30.0</th>
-      <th>75</th>
-      <th>125</th>
-      <th>5</th>
-      <th>3</th>
-      <th>3</th>
-      <td>'0ebr0': 'cebrf'</td>
-      <td>'00amy': 'rlamy'}</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13934,7 +13394,7 @@ div#notebook {
 <li>Write the dataframe to a CSV called: 'alphabet_soup_sample_report_fixed.csv'</li>
 </ol>
 <p>Read on to see an in-depth approach which follows these steps to solve the problem.</p>
-<h3 id="Step-1:-Read-the-dataframe-and-check-the-datatypes-for-the-columns">Step 1: Read the dataframe and check the datatypes for the columns<a class="anchor-link" href="#Step-1:-Read-the-dataframe-and-check-the-datatypes-for-the-columns">&#182;</a></h3><p>Please note the CSV is available here: xxxxx</p>
+<h3 id="Step-1:-Read-the-dataframe-and-check-the-datatypes-for-the-columns">Step 1: Read the dataframe and check the datatypes for the columns<a class="anchor-link" href="#Step-1:-Read-the-dataframe-and-check-the-datatypes-for-the-columns">&#182;</a></h3><p>Please note the CSV is available here: <a href="https://github.com/Kremzeeq/alphabet_soup/blob/master/reports/alphabet_soup_sample_report.csv">reports/alphabet_soup_sample_report.csv</a></p>
 <div class="highlight"><pre><span></span><span class="n">results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;reports/alphabet_soup_sample_report.csv&quot;</span><span class="p">)</span>
 <span class="n">results_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
@@ -13944,7 +13404,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;assets/alphabet_soup_sample_report.csv&quot;</span><span class="p">)</span>
@@ -13997,8 +13457,9 @@ memory usage: 17.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First of all, we notice there's some multi-indexing for the columns and the columns stored as objects which show key-pair values should be stored as strings rather than objects. I discovered that technically, pandas dataframes should not be used as pointers to dictionaries, and really it is best suited for dealing with numeric data. More information on this is available here: <a href="https://stackoverflow.com/questions/50731242/reading-pandas-dataframe-that-contains-dictionaries-in-cells-from-csv?rq=1">https://stackoverflow.com/questions/50731242/reading-pandas-dataframe-that-contains-dictionaries-in-cells-from-csv?rq=1</a></p>
-<p>If storing thousands of records, I wouldn't store the word dictionary infromation. I captured it for the alphabet soup problem as it was at the heart of working towards solving the problem.</p>
+<h4 id="Some-considerations">Some considerations<a class="anchor-link" href="#Some-considerations">&#182;</a></h4><p>First of all, we notice there's some multi-indexing for the columns and the columns stored as objects which show key-pair values should be stored as strings rather than objects. I discovered that technically, pandas dataframes should not be used as pointers to dictionaries, and really it is best suited for dealing with numeric data. An interesting discussion on this si avaialble on <a href="https://stackoverflow.com/questions/50731242/reading-pandas-dataframe-that-contains-dictionaries-in-cells-from-csv?rq=1">stackoverflow</a>.</p>
+<p>Within my project, I did try to cast the dictionary object as a string before it was written to CSV. However, when the CSV was read by the pandas dataframe, the same splitting accross columns still occurred and the split parts were recognised as objects as a data type.</p>
+<p>If storing thousands of records, I wouldn't store the word dictionary information. I captured it for the alphabet soup problem as it was at the heart of working towards solving the problem and visualising results. <strong>Please note my understanding is that storing dictionaries with pandas dataframes is not good practice</strong>, but in this instance, it provides an interesting formating problem to solve.</p>
 <h3 id="Step-2:-Store-the-column-names-in-a-variable-called-'columns'-for-later-use">Step 2: Store the column names in a variable called 'columns' for later use<a class="anchor-link" href="#Step-2:-Store-the-column-names-in-a-variable-called-'columns'-for-later-use">&#182;</a></h3><div class="highlight"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">columns</span>
 <span class="n">columns</span>
 </pre></div>
@@ -14008,7 +13469,7 @@ memory usage: 17.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">columns</span>
@@ -14025,7 +13486,7 @@ memory usage: 17.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -14065,7 +13526,7 @@ memory usage: 17.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_df</span><span class="p">[[</span><span class="s2">&quot;word_decoder_max_epochs&quot;</span><span class="p">,</span> <span class="s2">&quot;word_finder_min_iters_per_epoch&quot;</span><span class="p">,</span> 
@@ -14139,7 +13600,7 @@ memory usage: 17.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;best_decrypted_word_dict&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">results_df</span><span class="p">[[</span><span class="s2">&quot;word_decoder_max_epochs&quot;</span><span class="p">,</span> <span class="s2">&quot;word_finder_min_iters_per_epoch&quot;</span><span class="p">,</span> 
@@ -14210,7 +13671,7 @@ memory usage: 17.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;word_decoder_max_epochs&quot;</span><span class="p">,</span> <span class="s2">&quot;word_finder_min_iters_per_epoch&quot;</span><span class="p">,</span> 
@@ -14232,7 +13693,7 @@ memory usage: 17.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -14387,7 +13848,7 @@ memory usage: 17.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span>
@@ -14404,7 +13865,7 @@ memory usage: 17.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14550,22 +14011,17 @@ memory usage: 17.3+ KB
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;alphabet_soup_sample_report_fixed.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>results_df.to_csv("alphabet_soup_sample_report_fixed.csv", index=False)</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
